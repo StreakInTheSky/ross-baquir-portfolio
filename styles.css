@@ -8,7 +8,35 @@ h1, h2, h3 {
 }
 
 .page-topper {
+ width: 100%;
+ height: 50px;
+ display: flex;
+ justify-content: space-around;
+ align-items: flex-end;
+}
 
+.page-topper * {
+  margin: 0;
+}
+
+.page-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.page-title .subtitle {
+  margin-left: 10px;
+}
+
+.hero {
+  width: 100%;
+  height: calc(68vh - 50px);
+}
+
+.name {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
 }
 
 .top-nav-list {
@@ -36,7 +64,7 @@ h1, h2, h3 {
 }
 
 .project-links:first-child::after {
-  content: "";
+  content: " ";
   width: 2px;
   height: 10px;
   border: 1px solid black;
@@ -55,7 +83,7 @@ h1, h2, h3 {
 
 .project-links-sub-list {
   display: inline;
-  padding: 0;
+  padding: 0 0 0 5px;
 }
 
 .project-links-sub-list .project-link-item {
@@ -72,4 +100,20 @@ h1, h2, h3 {
 
 .project-tech-item:before {
   content: "•";
+}
+
+ul.contact-and-links {
+  padding: 0;
+}
+
+.contact-and-links-item {
+  list-style-type: none;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 740px) {
+  .hero {
+    width: 100%;
+    text-align: center;
+  }
 }
