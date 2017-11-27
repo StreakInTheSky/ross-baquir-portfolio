@@ -1,0 +1,75 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 110%;
+}
+
+h1, h2, h3 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.page-topper {
+
+}
+
+.top-nav-list {
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav-item {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.hero .tagline {
+  font-family: 'Bevan', serif;
+  font-size: 3em;
+}
+
+.content {
+  width: 90%;
+  margin: auto;
+}
+
+.project-links {
+  padding: 0;
+}
+
+.project-links:first-child::after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  border: 1px solid black;
+}
+
+.project-link-item {
+  list-style-type: none;
+  display: inline;
+}
+
+.contains-sublist {
+  display: inline-flex;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.project-links-sub-list {
+  display: inline;
+  padding: 0;
+}
+
+.project-links-sub-list .project-link-item {
+  display: block;
+}
+
+.project-tech {
+  padding: 0;
+}
+
+.project-tech-item {
+  display: inline;
+}
+
+.project-tech-item:before {
+  content: "•";
+}
