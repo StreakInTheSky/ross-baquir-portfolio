@@ -1,3 +1,9 @@
+:root {
+  --blue: 0,220,235;
+  --yellow: 255,217,0;
+  --background: rgb(240,250,220)
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +11,7 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 83%;
+  color: rgb(57,50,65);
 }
 
 h1, h2, h3 {
@@ -17,15 +24,28 @@ a, a:visited {
 }
 
 a:hover {
-  color: rgb(0,220,235);;
-  background-color: gray;
+  background-color: var(--background);
 }
 
+.highlight-blue {
+  color: rgb(var(--blue));
+}
+
+.highlight-yellow {
+  color: rgb(var(--yellow));
+}
+
+.highlight-background {
+  background-color: var(--background);
+}
+
+/* Page top*/
 .page-topper {
  width: 100%;
  height: 50px;
+ padding: 10px;
  display: flex;
- justify-content: space-around;
+ justify-content: space-between;
  align-items: center;
 }
 
@@ -38,17 +58,15 @@ a:hover {
   flex-direction: column;
 }
 
-.page-title .subtitle {
-  margin-left: 10px;
-}
-
 .name {
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
 }
 
 .top-nav-list {
-  margin: 0;
+  position: fixed;
+  top: 7px;
+  right: 7px;
   padding: 0;
 }
 
@@ -59,8 +77,12 @@ a:hover {
 
 .bar {
   width: 100%;
+  background-color: black;
+  font-size: 0.5em;
 }
 
+
+/* Hero */
 .hero {
   width: 100%;
   height: calc(100vh - 50px);
@@ -74,6 +96,8 @@ a:hover {
   font-size: 3.2em;
 }
 
+
+/* Content General */
 .content {
   width: 90%;
   margin: auto;
@@ -101,36 +125,73 @@ a:hover {
   display: flex;
 }
 
+
+/* About */
 .about-content {
   flex-direction: column;
   justify-content: center;
 }
 
-.projects-content {
-  flex-wrap: wrap;
+
+/* Projects */
+.projects .section-header {
   position: relative;
 }
 
+.projects-nav {
+  position: absolute;
+}
+
+.list-of-projects {
+  padding: 0;
+}
+
+.project-listing {
+  list-style-type: none;
+}
+
+.projects-content {
+  width: 300%;
+  justify-content: space-between;
+  align-content: center;
+}
+
 article.project {
-  position: relative;
-  height: 100%;
-  overflow-y: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project:last-child {
+  margin: 0;
 }
 
 .project-links {
   padding: 0;
 }
 
-.project-links:first-child::after {
-  content: " ";
-  width: 2px;
-  height: 10px;
-  border: 1px solid black;
-}
-
 .project-link-item {
   list-style-type: none;
   display: inline;
+  position: relative;
+  margin-right: 10px;
+}
+
+.project-link-item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -8px;
+  background-color: rgb(var(--blue));
+}
+
+.project-link-item:last-child:after {
+  display: none;
 }
 
 .contains-sublist {
@@ -144,12 +205,8 @@ article.project {
   padding: 0 0 0 5px;
 }
 
-.project-links-sub-list .project-link-item {
-  display: block;
-}
-
 .image-container {
-  width: 100%;
+  width: 90vw;
   height: calc(100vw/1.5);
   background-color: gray;
 }
@@ -166,10 +223,17 @@ article.project {
   display: inline;
 }
 
-.project-tech-item:before {
+.project-tech-item:after {
   content: "•";
+  color: rgb(var(--yellow));
 }
 
+.project-tech-item:last-child:after {
+  display: none;
+}
+
+
+/* Contact and Links */
 ul.contact-and-links {
   padding: 0;
 }
@@ -192,6 +256,7 @@ ul.contact-and-links {
   }
 
   .page-topper {
+    justify-content: space-around;
     align-items: flex-end;
   }
 
@@ -200,11 +265,65 @@ ul.contact-and-links {
     align-items: baseline;
   }
 
+  .page-title .subtitle {
+    margin-left: 10px;
+  }
+
+  .top-nav-list {
+    position: static;
+  }
+
+  .bar {
+    background-color: white;
+    font-size: 1em;
+  }
+
   .top-nav-item {
-    display: inline-block;
+    display: inline;
+    margin-bottom: 0;
   }
 
   .hero .tagline {
     font-size: 5em;
+  }
+
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .paragraph-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .paragraph-group .about {
+    max-width: 30%;
+    height: 100%;
+    text-align: justify;
+  }
+
+  .projects-nav {
+    display: none;
+  }
+
+  .projects-content {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .project {
+    max-width: 30%;
+    min-width: 300px;
+  }
+
+  .project-details {
+    display: block;
+  }
+
+  .project-description {
+    text-align: justify;
   }
 }

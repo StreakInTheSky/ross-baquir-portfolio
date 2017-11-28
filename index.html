@@ -15,16 +15,16 @@
       <h1 class="name">Ross Baquir</h1>
       <p class="subtitle">Full-Stack Web Developer</p>
     </div>
-    <nav class="top-nav">
+    <nav class="top-nav" id="top-nav">
       <ul class="top-nav-list">
         <li class="top-nav-item bar"><a href="#about">About</a></li>
-        <li class="top-nav-item bar"><a href="#portfolio">Portfolio</a></li>
+        <li class="top-nav-item bar"><a href="#projects">Projects</a></li>
         <li class="top-nav-item bar"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <div class="hero">
-    <p class="tagline">Let’s<br>Create<br>Experiences.</p>
+    <p class="tagline">Let<span class="highlight-blue">’</span>s<br>Create<br>Experiences<span class="highlight-yellow">.</span></p>
   </div>
   <main class="content">
     <section class="about" id="about">
@@ -32,23 +32,32 @@
         <h2 class="section-title">About Me</h2>
       </header>
       <div class="about-content">
-        <p class="about">
-          Hi! I’m Ross Baquir, an aspiring full-stack web developer based in Los Angeles. I relish the creative process and enjoy tackling complex problems. Seeing ideas become code and code becoming enjoyable user experiences is what I love the most about web development. I believe that a good app will have an elegant, effective front-end that is supported by a strong, efficient back-end. I like planning and designing front-end architectures and understand the importance of well tested code.
-        </p>
-        <p class="about">
-          I work with HTML5, CSS3, Javascript, React and Node.js and have experience with many of the common libraries and technologies related them. I also enjoy learning new languages, frameworks, and libraries.
-        </p>
-        <p class="about">
-          When not tinkering with code, I like to make photos with cameras, play and listen to music, and appreciate the popular arts (Though it’s mostly just watching cartoons, and playing games… >_>). I enjoy riding my bike around town and a good cup of coffee. I’m interested in new technologies, modern design/architecture, but can always appreciate the weird and wacky. I’m in love with Japan. But most of all I love spending time with my wife and cute, little baby girl.
-        </p>
+        <div class="paragraph-group">
+          <p class="about">
+            Hi! I’m <span class="highlight-background">Ross Baquir</span>, an aspiring full-stack web developer based in Los Angeles. I relish the creative process and enjoy tackling complex problems. Seeing ideas become code and code becoming enjoyable user experiences is what I love the most about web development. I believe that a good app will have an elegant, effective front-end that is supported by a strong, efficient back-end. I like planning and designing front-end architectures and understand the importance of well tested code.
+          </p>
+          <p class="about">
+            I work with <span class="highlight-background">HTML5</span>, <span class="highlight-background">CSS3</span>, <span class="highlight-background">Javascript</span>, <span class="highlight-background">Reac</span>t and <span class="highlight-background">Node.js</span> and have experience with many of the common libraries and technologies related them. I also enjoy learning new languages, frameworks, and libraries.
+          </p>
+          <p class="about">
+            When not tinkering with code, I like to make photos with cameras, play and listen to music, and appreciate the popular arts (Though it’s mostly just watching cartoons, and playing games… >_>). I enjoy riding my bike around town and a good cup of coffee. I’m interested in new technologies, modern design & architecture, but can always appreciate the weird and wacky. I’m in love with Japan. But most of all I love spending time with my wife and cute, little baby girl.
+          </p>
+        </div>
       </div>
     </section>
-    <section class="portfolio" id="portfolio">
+    <section class="projects" id="projects">
       <header class="section-header">
-        <h2 class="section-title">Portfolio</h2>
+        <h2 class="section-title">Projects</h2>
+        <nav class="projects-nav">
+          <ul class="list-of-projects">
+            <li class="project-listing"><a href="#curator-rater">Curator-rater</a></li>
+            <li class="project-listing"><a href="#open-toolbox">Open-toolbox</a></li>
+            <li class="project-listing"><a href="#pokemon-google-maps">Pokemon GOogle Maps</a></li>
+          </ul>
+        </nav>
       </header>
       <div class="projects-content">
-        <article class="project">
+        <article class="project" id="curator-rater">
           <header class="project-header">
             <h3 class="project-title">Curator-rater</h3>
             <p class="project-tagline">image gallery based social media platform</p>
@@ -81,7 +90,7 @@
             </ul>
           </div>
         </article>
-        <article class="project">
+        <article class="project" id="open-toolbox">
           <header class="project-header">
             <h3 class="project-title">Open-toolbox</h3>
             <p class="project-tagline">tool-sharing marketplace</p>
@@ -92,7 +101,7 @@
           </ul>
           <div class="image-container"><img src="" alt=""></div>
           <div class="project-details">
-            <p class="project-description">Open-toolbox is a tool-sharing marketplace that allows users to rent out their tools to other users.. They can set photo, daily rate, details and set a date range for availability. Renters can narrow down their search by category and set their rental dates. It is an AirBnb for tools that’s more intuitive to use than craigslist.</p>
+            <p class="project-description">Open-toolbox is a tool sharing marketplace that allows users to rent out their tools to other users.. They can set photo, daily rate, details and set a date range for availability. Renters can narrow down their search by category and set their rental dates. It is an AirBnb for tools that’s more intuitive to use than craigslist.</p>
             <ul class="project-tech">
               <li class="project-tech-item">HTML/CSS</li>
               <li class="project-tech-item">Javascript/jQuery</li>
@@ -106,7 +115,7 @@
             </ul>
           </div>
         </article>
-        <article class="project">
+        <article class="project" id="pokemon-google-maps">
           <header class="project-header">
             <h3 class="project-title">Pokemon GOogle Maps</h3>
             <p class="project-tagline">simple Pokemon game in your browser</p>
@@ -117,7 +126,7 @@
           </ul>
           <div class="image-container"><img src="" alt=""></div>
           <div class="project-details">
-            <p class="project-description">Pokemon GOogle Maps is a simple fun project that implements a Pokemon Go like game into google maps. Users can start catching Pokemon in their own neighborhoods or use the default location. At their chosen location once the user chooses their starter Pokemon, they can start trying to catch them all!</p>
+            <p class="project-description">Pokemon GOogle Maps is a simple fun little project that implements a Pokemon Go like game into google maps. Users can start catching Pokemon in their own neighborhoods or use the default location. At their chosen location once the user chooses their starter Pokemon, they can start trying to catch them all!</p>
             <ul class="project-tech">
               <li class="project-tech-item">HTML/CSS</li>
               <li class="project-tech-item">Javascript/jQuery</li>
