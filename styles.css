@@ -1,10 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 110%;
+  font-size: 83%;
 }
 
 h1, h2, h3 {
   font-family: Verdana, Geneva, sans-serif;
+  margin: 0;
+}
+
+a, a:visited {
+  color: black;
+}
+
+a:hover {
+  color: rgb(0,220,235);;
+  background-color: gray;
 }
 
 .page-topper {
@@ -21,17 +35,11 @@ h1, h2, h3 {
 
 .page-title {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  flex-direction: column;
 }
 
 .page-title .subtitle {
   margin-left: 10px;
-}
-
-.hero {
-  width: 100%;
-  height: calc(68vh - 50px);
 }
 
 .name {
@@ -45,18 +53,63 @@ h1, h2, h3 {
 }
 
 .top-nav-item {
-  display: inline-block;
   list-style-type: none;
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .tagline {
   font-family: 'Bevan', serif;
-  font-size: 3em;
+  font-size: 3.2em;
 }
 
 .content {
   width: 90%;
   margin: auto;
+}
+
+.content section {
+  height: 100vh;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.section-header {
+  margin-bottom: 2em;
+}
+
+.section-title {
+  margin: 0;
+}
+
+.about-content, .projects-content, .contact-and-links {
+  flex-grow: 2;
+  display: flex;
+}
+
+.about-content {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects-content {
+  flex-wrap: wrap;
+  position: relative;
+}
+
+article.project {
+  position: relative;
+  height: 100%;
+  overflow-y: hidden;
 }
 
 .project-links {
@@ -90,6 +143,16 @@ h1, h2, h3 {
   display: block;
 }
 
+.image-container {
+  width: 100%;
+  height: calc(100vw/1.5);
+  background-color: gray;
+}
+
+.project-details {
+  display: none;
+}
+
 .project-tech {
   padding: 0;
 }
@@ -111,9 +174,28 @@ ul.contact-and-links {
   display: inline-block;
 }
 
+@media only screen and (min-width: 400px) {
+  .image-container {
+    width: 300px;
+    height: 225px;
+  }
+}
+
 @media only screen and (min-width: 740px) {
-  .hero {
-    width: 100%;
-    text-align: center;
+  body {
+    font-size: 100%;
+  }
+
+  .page-title {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .top-nav-item {
+    display: inline-block;
+  }
+
+  .hero .tagline {
+    font-size: 5em;
   }
 }
