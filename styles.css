@@ -26,7 +26,7 @@ a:hover {
  height: 50px;
  display: flex;
  justify-content: space-around;
- align-items: flex-end;
+ align-items: center;
 }
 
 .page-topper * {
@@ -54,6 +54,11 @@ a:hover {
 
 .top-nav-item {
   list-style-type: none;
+  margin-bottom: 2px;
+}
+
+.bar {
+  width: 100%;
 }
 
 .hero {
@@ -184,6 +189,10 @@ ul.contact-and-links {
 @media only screen and (min-width: 740px) {
   body {
     font-size: 100%;
+  }
+
+  .page-topper {
+    align-items: flex-end;
   }
 
   .page-title {
