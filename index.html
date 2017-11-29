@@ -59,7 +59,7 @@
         <h2 class="section-title">Projects</h2>
       </header>
       <div class="projects-content">
-        <nav class="projects-nav">
+        <nav class="projects-nav" id="projects-nav">
           <ul class="list-of-projects">
             <li class="project-listing"><a href="#curator-rater">Curator-rater</a></li>
             <li class="project-listing"><a href="#open-toolbox">Open-toolbox</a></li>
@@ -71,35 +71,36 @@
             <h3 class="project-title">Curator-rater</h3>
             <p class="project-tagline">image gallery based social media platform</p>
           </header>
-            <div class="project-body">
-              <ul class="project-links">
-                <li class="project-link-item"><a href="http://curator-rater.netlify.com/" target="blank_">Live</a></li>
-                <li class="project-link-item contains-sublist">
-                  <span class=sublist-label>Github:</span>
-                  <ul class="project-links-sub-list">
-                    <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater-client" target="blank_">Front-end</a></li>
-                    <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater" target="blank_">Back-end</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="image-container"><img src="" alt=""></div>
-              <div class="project-details">
-                <p class="project-description">Curator-rater is an image-based social media platform. Its main focus is on curating galleries to engage with an audience. It is designed for content creators to share their bigger ideas that cannot be fully expressed through single images. Users can follow other users and mark their favorite galleries, while a simple voting system gives content creators valuable feedback on what images resonates with other users.</p>
-                <ul class="project-tech">
-                  <li class="project-tech-item">HTML/CSS</li>
-                  <li class="project-tech-item">React</li>
-                  <li class="project-tech-item">Node.js</li>
-                  <li class="project-tech-item">Express</li>
-                  <li class="project-tech-item">Passport.js</li>
-                  <li class="project-tech-item">MongoDB</li>
-                  <li class="project-tech-item">mocha/chai</li>
-                  <li class="project-tech-item">AWS S3</li>
-                  <li class="project-tech-item">Travis CI</li>
-                  <li class="project-tech-item">Heroku</li>
-                  <li class="project-tech-item">Netlify</li>
+          <div class="project-body">
+            <ul class="project-links">
+              <li class="project-link-item"><a href="http://curator-rater.netlify.com/" target="blank_">Live</a></li>
+              <li class="project-link-item contains-sublist">
+                <span class=sublist-label>Github:</span>
+                <ul class="project-links-sub-list">
+                  <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater-client" target="blank_">Front-end</a></li>
+                  <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater" target="blank_">Back-end</a></li>
                 </ul>
-              </div>
+              </li>
+            </ul>
+            <div class="image-container"><img src="" alt=""></div>
+            <div class="project-details">
+              <p class="project-description">Curator-rater is an image-based social media platform. Its main focus is on curating galleries to engage with an audience. It is designed for content creators to share their bigger ideas that cannot be fully expressed through single images. Users can follow other users and mark their favorite galleries, while a simple voting system gives content creators valuable feedback on what images resonates with other users.</p>
+              <ul class="project-tech">
+                <li class="project-tech-item">HTML/CSS</li>
+                <li class="project-tech-item">React</li>
+                <li class="project-tech-item">Node.js</li>
+                <li class="project-tech-item">Express</li>
+                <li class="project-tech-item">Passport.js</li>
+                <li class="project-tech-item">MongoDB</li>
+                <li class="project-tech-item">mocha/chai</li>
+                <li class="project-tech-item">AWS S3</li>
+                <li class="project-tech-item">Travis CI</li>
+                <li class="project-tech-item">Heroku</li>
+                <li class="project-tech-item">Netlify</li>
+              </ul>
             </div>
+          </div>
+          <div class="arrow-links blink"><a class="back-arrow" href="#projects-nav">&#8676;</a></div>
         </article>
         <article class="project" id="open-toolbox">
           <header class="project-header">
@@ -127,6 +128,7 @@
               </ul>
             </div>
           </div>
+          <div class="arrow-links blink"><a class="back-arrow" href="#projects-nav">&#8676;</a></div>
         </article>
         <article class="project" id="pokemon-google-maps">
           <header class="project-header">
@@ -149,6 +151,7 @@
               </ul>
             </div>
           </div>
+          <div class="arrow-links blink"><a class="back-arrow" href="#projects-nav">&#8676;</a></div>
         </article>
       </div>
       <div class="arrow-links blink"><a class="down-arrow" href="#contact">&#9660;</a><a class="up-arrow" href="#about">&#9650;</a></div>
@@ -158,9 +161,9 @@
         <h2 class="section-title">Contact & Links</h2>
       </header>
       <ul class="contact-and-links">
-        <li class="contact-and-links-item"><a href="mailto:rossbaquir@gmail.com" class="contact-item">email</a></li>
-        <li class="contact-and-links-item"><a href="https://www.linkedin.com/in/ross-baquir-a062018a/" class="contact-item" target="blank_">LinkedIn</a></li>
-        <li class="contact-and-links-item"><a href="https://github.com/StreakInTheSky" class="contact-item" target="blank_">GitHub</a></li>
+        <li class="contact-and-links-item"><a href="mailto:rossbaquir@gmail.com" class="contact-item-link"><img class="link-icon" src="assets/email.png" alt="send email"></a></li>
+        <li class="contact-and-links-item"><a href="https://www.linkedin.com/in/ross-baquir-a062018a/" class="contact-item-link" target="blank_"><img class="link-icon" src="assets/linked-in.png" alt="visit me on Linked In"></a></li>
+        <li class="contact-and-links-item"><a href="https://github.com/StreakInTheSky" class="contact-item-link" target="blank_"><img class="link-icon" src="assets/github.png" alt="check out my Git Hub page"></a></li>
       </ul>
       <div class="arrow-links blink"><a class="up-arrow" href="#projects">&#9650;</a></div>
     </section>
