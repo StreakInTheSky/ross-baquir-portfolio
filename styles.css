@@ -319,8 +319,12 @@ a:hover {
 
 .image-container {
   width: 90vw;
-  height: calc(100vw/1.5);
-  background-color: gray;
+  position: relative;
+  border: 1px solid rgb(var(--black));
+}
+
+.project-thumb{
+  width: 100%;
 }
 
 .project-details {
@@ -361,7 +365,7 @@ ul.contact-and-links {
 
 .contact-and-links-item {
   list-style-type: none;
-  margin: 10px auto;
+  margin: 10px 50px;
 }
 
 .link-icon {
@@ -383,7 +387,6 @@ ul.contact-and-links {
 @media only screen and (min-width: 400px) {
   .image-container {
     width: 300px;
-    height: 225px;
   }
 }
 
@@ -483,6 +486,7 @@ ul.contact-and-links {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+            justify-content: space-around;
   }
 
   .project {
