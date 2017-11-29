@@ -270,6 +270,10 @@ a:hover {
           justify-content: center;
 }
 
+.project-listing {
+  margin: 10px 0;
+}
+
 .project:last-child {
   margin: 0;
 }
