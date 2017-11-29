@@ -113,11 +113,13 @@ a:hover {
   right: 7px;
   padding: 0;
   z-index: 10;
+  -webkit-transition: font-size linear 100ms;
   transition: font-size linear 100ms;
 }
 
 .hide-menu {
   font-size: 0.5em;
+  -webkit-transition: font-size linear 100ms;
   transition: font-size linear 100ms;
 }
 
@@ -135,12 +137,14 @@ a:hover {
   background-color: rgb(var(--black));
   border-radius: 2px;
   z-index: 2;
+  -webkit-transition: height linear 100ms, width linear 100ms;
   transition: height linear 100ms, width linear 100ms;
 }
 
 .hide-bar {
   height: 1.4em;
   width: 0;
+  -webkit-transition: height linear 100ms, width ease-in 200ms;
   transition: height linear 100ms, width ease-in 200ms;
 }
 
@@ -201,8 +205,13 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow-y: hidden;
 }
 
@@ -360,10 +369,19 @@ a:hover {
 /* Contact and Links */
 ul.contact-and-links {
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
 }
 
@@ -378,7 +396,10 @@ ul.contact-and-links {
 
 @media screen and (orientation:landscape) and (max-width: 739px) {
   ul.contact-and-links {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -490,7 +511,8 @@ ul.contact-and-links {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
   }
 
   .project {
@@ -515,7 +537,10 @@ ul.contact-and-links {
   }
 
   ul.contact-and-links {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .contact-item-link:hover {
