@@ -15,16 +15,24 @@
       <h1 class="name">Ross Baquir</h1>
       <p class="subtitle">Full-Stack Web Developer</p>
     </div>
-    <nav class="top-nav" id="top-nav">
-      <ul class="top-nav-list">
-        <li class="top-nav-item bar"><a href="#about">About</a></li>
-        <li class="top-nav-item bar"><a href="#projects">Projects</a></li>
-        <li class="top-nav-item bar"><a href="#contact">Contact</a></li>
+    <nav class="top-nav">
+      <ul class="top-nav-list hide-menu" id="top-nav">
+        <li class="top-nav-item"><a href="#about">About</a></li>
+        <li class="top-nav-item"><a href="#projects">Projects</a></li>
+        <li class="top-nav-item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="top-nav-bars" >
+      <ul class="top-nav-bar-array" id="top-nav-bars">
+        <li class="bar"></li>
+        <li class="bar"></li>
+        <li class="bar"></li>
+      </ul>
+    </div>
   </header>
   <div class="hero">
     <p class="tagline">Let<span class="highlight-blue">’</span>s<br>Create<br>Experiences<span class="highlight-yellow">.</span></p>
+    <div class="arrow-links blink"><a class="down-arrow" href="#about">&#9660;</a></div>
   </div>
   <main class="content">
     <section class="about" id="about">
@@ -34,20 +42,23 @@
       <div class="about-content">
         <div class="paragraph-group">
           <p class="about">
-            Hi! I’m <span class="highlight-background">Ross Baquir</span>, an aspiring full-stack web developer based in Los Angeles. I relish the creative process and enjoy tackling complex problems. Seeing ideas become code and code becoming enjoyable user experiences is what I love the most about web development. I believe that a good app will have an elegant, effective front-end that is supported by a strong, efficient back-end. I like planning and designing front-end architectures and understand the importance of well tested code.
+            Hi! I’m <span class="highlight-background">Ross Baquir</span>, an aspiring full-stack web developer based in the Los Angeles area. I relish the creative process and enjoy tackling complex problems. Seeing ideas become code and code becoming enjoyable user experiences is what I love the most about web development. I believe that a good app will have an elegant, effective front-end that is supported by a strong, efficient back-end.
           </p>
           <p class="about">
-            I work with <span class="highlight-background">HTML5</span>, <span class="highlight-background">CSS3</span>, <span class="highlight-background">Javascript</span>, <span class="highlight-background">Reac</span>t and <span class="highlight-background">Node.js</span> and have experience with many of the common libraries and technologies related them. I also enjoy learning new languages, frameworks, and libraries.
+            I work with <span class="highlight-background">HTML5</span>, <span class="highlight-background">CSS3</span>, <span class="highlight-background">Javascript</span>, <span class="highlight-background">React</span> and <span class="highlight-background">Node.js</span> and have experience with many of the common libraries and technologies related them. I also enjoy learning new languages, frameworks, and libraries.
           </p>
           <p class="about">
             When not tinkering with code, I like to make photos with cameras, play and listen to music, and appreciate the popular arts (Though it’s mostly just watching cartoons, and playing games… >_>). I enjoy riding my bike around town and a good cup of coffee. I’m interested in new technologies, modern design & architecture, but can always appreciate the weird and wacky. I’m in love with Japan. But most of all I love spending time with my wife and cute, little baby girl.
           </p>
         </div>
       </div>
+      <div class="arrow-links blink"><a class="down-arrow" href="#projects">&#9660;</a><a class="up-arrow" href="#">&#9650;</a></div>
     </section>
     <section class="projects" id="projects">
       <header class="section-header">
         <h2 class="section-title">Projects</h2>
+      </header>
+      <div class="projects-content">
         <nav class="projects-nav">
           <ul class="list-of-projects">
             <li class="project-listing"><a href="#curator-rater">Curator-rater</a></li>
@@ -55,64 +66,66 @@
             <li class="project-listing"><a href="#pokemon-google-maps">Pokemon GOogle Maps</a></li>
           </ul>
         </nav>
-      </header>
-      <div class="projects-content">
         <article class="project" id="curator-rater">
           <header class="project-header">
             <h3 class="project-title">Curator-rater</h3>
             <p class="project-tagline">image gallery based social media platform</p>
           </header>
-          <ul class="project-links">
-            <li class="project-link-item"><a href="http://curator-rater.netlify.com/">Live</a></li>
-            <li class="project-link-item contains-sublist">
-              <span class=sublist-label>Github:</span>
-              <ul class="project-links-sub-list">
-                <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater-client">Front-end</a></li>
-                <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater">Back-end</a></li>
+            <div class="project-body">
+              <ul class="project-links">
+                <li class="project-link-item"><a href="http://curator-rater.netlify.com/" target="blank_">Live</a></li>
+                <li class="project-link-item contains-sublist">
+                  <span class=sublist-label>Github:</span>
+                  <ul class="project-links-sub-list">
+                    <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater-client" target="blank_">Front-end</a></li>
+                    <li class="project-link-item"><a href="https://github.com/StreakInTheSky/curator-rater" target="blank_">Back-end</a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
-          <div class="image-container"><img src="" alt=""></div>
-          <div class="project-details">
-            <p class="project-description">Curator-rater is an image-based social media platform. Its main focus is on curating galleries to engage with their audience. It is designed for content creators to share their bigger ideas that cannot be fully expressed through single images. Users can follow other users and mark their favorite galleries, while a simple voting system gives content creators valuable feedback on what images resonates with other users.</p>
-            <ul class="project-tech">
-              <li class="project-tech-item">HTML/CSS</li>
-              <li class="project-tech-item">React</li>
-              <li class="project-tech-item">Node.js</li>
-              <li class="project-tech-item">Express</li>
-              <li class="project-tech-item">Passport.js</li>
-              <li class="project-tech-item">MongoDB</li>
-              <li class="project-tech-item">mocha/chai</li>
-              <li class="project-tech-item">AWS S3</li>
-              <li class="project-tech-item">Travis CI</li>
-              <li class="project-tech-item">Heroku</li>
-              <li class="project-tech-item">Netlify</li>
-            </ul>
-          </div>
+              <div class="image-container"><img src="" alt=""></div>
+              <div class="project-details">
+                <p class="project-description">Curator-rater is an image-based social media platform. Its main focus is on curating galleries to engage with an audience. It is designed for content creators to share their bigger ideas that cannot be fully expressed through single images. Users can follow other users and mark their favorite galleries, while a simple voting system gives content creators valuable feedback on what images resonates with other users.</p>
+                <ul class="project-tech">
+                  <li class="project-tech-item">HTML/CSS</li>
+                  <li class="project-tech-item">React</li>
+                  <li class="project-tech-item">Node.js</li>
+                  <li class="project-tech-item">Express</li>
+                  <li class="project-tech-item">Passport.js</li>
+                  <li class="project-tech-item">MongoDB</li>
+                  <li class="project-tech-item">mocha/chai</li>
+                  <li class="project-tech-item">AWS S3</li>
+                  <li class="project-tech-item">Travis CI</li>
+                  <li class="project-tech-item">Heroku</li>
+                  <li class="project-tech-item">Netlify</li>
+                </ul>
+              </div>
+            </div>
         </article>
         <article class="project" id="open-toolbox">
           <header class="project-header">
-            <h3 class="project-title">Open-toolbox</h3>
+            <h3 class="project-title">Open Toolbox</h3>
             <p class="project-tagline">tool-sharing marketplace</p>
           </header>
-          <ul class="project-links">
-            <li class="project-link-item"><a href="https://blooming-lake-35656.herokuapp.com/">Live</a></li>
-            <li class="project-link-item"><a href="https://github.com/StreakInTheSky/open-toolbox">Github</a></li>
-          </ul>
-          <div class="image-container"><img src="" alt=""></div>
-          <div class="project-details">
-            <p class="project-description">Open-toolbox is a tool sharing marketplace that allows users to rent out their tools to other users.. They can set photo, daily rate, details and set a date range for availability. Renters can narrow down their search by category and set their rental dates. It is an AirBnb for tools that’s more intuitive to use than craigslist.</p>
-            <ul class="project-tech">
-              <li class="project-tech-item">HTML/CSS</li>
-              <li class="project-tech-item">Javascript/jQuery</li>
-              <li class="project-tech-item">Nodes.js</li>
-              <li class="project-tech-item">Express</li>
-              <li class="project-tech-item">MongoDB</li>
-              <li class="project-tech-item">mocha/chai</li>
-              <li class="project-tech-item">Gulp</li>
-              <li class="project-tech-item">Travis CI</li>
-              <li class="project-tech-item">Heroku</li>
+          <div class="project-body">
+            <ul class="project-links">
+              <li class="project-link-item"><a href="https://blooming-lake-35656.herokuapp.com/" target="blank_">Live</a></li>
+              <li class="project-link-item"><a href="https://github.com/StreakInTheSky/open-toolbox" target="blank_">Github</a></li>
             </ul>
+            <div class="image-container"><img src="" alt=""></div>
+            <div class="project-details">
+              <p class="project-description">Open Toolbox is a tool sharing marketplace that allows users to rent out their tools to other users.. They can set photo, daily rate, details and set a date range for availability. Renters can narrow down their search by category and set their rental dates. It is an AirBnb for tools that’s more intuitive to use than craigslist.</p>
+              <ul class="project-tech">
+                <li class="project-tech-item">HTML/CSS</li>
+                <li class="project-tech-item">Javascript/jQuery</li>
+                <li class="project-tech-item">Nodes.js</li>
+                <li class="project-tech-item">Express</li>
+                <li class="project-tech-item">MongoDB</li>
+                <li class="project-tech-item">mocha/chai</li>
+                <li class="project-tech-item">Gulp</li>
+                <li class="project-tech-item">Travis CI</li>
+                <li class="project-tech-item">Heroku</li>
+              </ul>
+            </div>
           </div>
         </article>
         <article class="project" id="pokemon-google-maps">
@@ -120,22 +133,25 @@
             <h3 class="project-title">Pokemon GOogle Maps</h3>
             <p class="project-tagline">simple Pokemon game in your browser</p>
           </header>
-          <ul class="project-links">
-            <li class="project-link-item"><a href="https://streakinthesky.github.io/pokemon-google-maps/">Live</a></li>
-            <li class="project-link-item"><a href="https://github.com/StreakInTheSky/pokemon-google-maps">Github</a></li>
-          </ul>
-          <div class="image-container"><img src="" alt=""></div>
-          <div class="project-details">
-            <p class="project-description">Pokemon GOogle Maps is a simple fun little project that implements a Pokemon Go like game into google maps. Users can start catching Pokemon in their own neighborhoods or use the default location. At their chosen location once the user chooses their starter Pokemon, they can start trying to catch them all!</p>
-            <ul class="project-tech">
-              <li class="project-tech-item">HTML/CSS</li>
-              <li class="project-tech-item">Javascript/jQuery</li>
-              <li class="project-tech-item">Google Maps API</li>
-              <li class="project-tech-item">PokeApi</li>
+          <div class="project-body">
+            <ul class="project-links">
+              <li class="project-link-item"><a href="https://streakinthesky.github.io/pokemon-google-maps/" target="blank_">Live</a></li>
+              <li class="project-link-item"><a href="https://github.com/StreakInTheSky/pokemon-google-maps" target="blank_">Github</a></li>
             </ul>
+            <div class="image-container"><img src="" alt=""></div>
+            <div class="project-details">
+              <p class="project-description">Pokemon GOogle Maps is a simple fun little project that implements a Pokemon Go like game into google maps. Users can start catching Pokemon in their own neighborhoods or use the default location. At their chosen location once the user chooses their starter Pokemon, they can start trying to catch them all!</p>
+              <ul class="project-tech">
+                <li class="project-tech-item">HTML/CSS</li>
+                <li class="project-tech-item">Javascript/jQuery</li>
+                <li class="project-tech-item">Google Maps API</li>
+                <li class="project-tech-item">PokeApi</li>
+              </ul>
+            </div>
           </div>
         </article>
       </div>
+      <div class="arrow-links blink"><a class="down-arrow" href="#contact">&#9660;</a><a class="up-arrow" href="#about">&#9650;</a></div>
     </section>
     <section class="contact" id="contact">
       <header class="section-header">
@@ -143,9 +159,10 @@
       </header>
       <ul class="contact-and-links">
         <li class="contact-and-links-item"><a href="mailto:rossbaquir@gmail.com" class="contact-item">email</a></li>
-        <li class="contact-and-links-item"><a href="https://www.linkedin.com/in/ross-baquir-a062018a/" class="contact-item">LinkedIn</a></li>
-        <li class="contact-and-links-item"><a href="https://github.com/StreakInTheSky" class="contact-item">GitHub</a></li>
+        <li class="contact-and-links-item"><a href="https://www.linkedin.com/in/ross-baquir-a062018a/" class="contact-item" target="blank_">LinkedIn</a></li>
+        <li class="contact-and-links-item"><a href="https://github.com/StreakInTheSky" class="contact-item" target="blank_">GitHub</a></li>
       </ul>
+      <div class="arrow-links blink"><a class="up-arrow" href="#projects">&#9650;</a></div>
     </section>
   </main>
   <script type="text/javascript" src="app.js"></script>
