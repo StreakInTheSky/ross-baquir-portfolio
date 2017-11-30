@@ -128,10 +128,11 @@ a:hover {
 }
 
 .hide-menu {
+  visibility: hidden;
   font-size: 0.5em;
   line-height: 1em;
-  -webkit-transition: font-size linear 100ms;
-  transition: font-size linear 100ms;
+  -webkit-transition: visibility 100ms, font-size linear 100ms;
+  transition: visibility 100ms, font-size linear 100ms;
 }
 
 .top-nav-item, .bar {
@@ -166,7 +167,7 @@ a:hover {
 
 .arrow-links {
   position: relative;
-  bottom: 20px;
+  bottom: 50px;
   font-size: 1.5em;
 }
 
@@ -222,7 +223,6 @@ a:hover {
 .content section {
   position: relative;
   min-height: 100vh;
-  /*padding: 5vh 0;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,9 +245,7 @@ a:hover {
 }
 
 .about-content, .projects-content, .contact-and-links {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  flex-grow: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,10 +272,6 @@ a:hover {
   margin-bottom: 15px;
 }
 
-.paragraph-group p:last-child {
-  margin-bottom: 0;
-}
-
 
 /* Projects */
 .projects .section-header {
@@ -300,7 +294,7 @@ a:hover {
       align-content: center;
 }
 
-.projects-nav, article.project {
+.projects-nav, .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,7 +359,6 @@ a:hover {
   max-width: 500px;
   margin: auto;
   position: relative;
-  border: 1px solid rgb(var(--black));
 }
 
 .more-info {
@@ -382,9 +375,14 @@ a:hover {
 
 .project-thumb{
   width: 100%;
+  border: 1px solid rgb(var(--black));
 }
 
 .project-details {
+  display: block;
+}
+
+.project-description {
   display: none;
 }
 
@@ -495,6 +493,7 @@ ul.contact-and-links {
 
   .hide-menu {
     font-size: 1em;
+    visibility: visible;
   }
 
   .top-nav-bars {
@@ -561,7 +560,7 @@ ul.contact-and-links {
     min-width: 300px;
   }
 
-  .project-details {
+  .project-description {
     display: block;
   }
 
@@ -599,11 +598,17 @@ ul.contact-and-links {
   .project {
     margin-right: 60px;
     margin-bottom: 50px;
-    width: 50%;
+    flex: 2 0 60%;
+    max-width: 100%;
   }
 
   .project-body {
     width: 100%;
+  }
+
+  .image-container {
+    max-width: 300px;
+    margin: auto;
   }
 }
 
@@ -623,14 +628,32 @@ ul.contact-and-links {
   .project-body {
     display: flex;
     align-content: flex-start;
+    justify-content: space-between;
   }
 
   .project-links {
     margin: 0;
   }
 
+  .project-links-sub-list .project-link-item {
+    display: block;
+  }
+
   .image-container {
     max-width: 50%;
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  .project-details {
+    display: block;
+    position: absolute;
+    width: 45%;
+    top: 170px;
+  }
+
+  .project-description {
+    display: none;
   }
 
   ul.contact-and-links {
