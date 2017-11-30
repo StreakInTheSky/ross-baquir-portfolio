@@ -212,6 +212,7 @@ a:hover {
 
 .hero .arrow-links {
   position: absolute;
+  bottom: 80px;
 }
 
 /* Content General */
