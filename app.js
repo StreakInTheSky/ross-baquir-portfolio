@@ -1,3 +1,7 @@
+var state = {
+  openNav: false
+}
+
 var menuButton = document.getElementById('top-nav-bars')
 var topNav = document.getElementById('top-nav')
 var about = document.getElementById('about')
@@ -14,8 +18,10 @@ function toggleBars() {
   for (var i=0; i < bars.length; i++) {
     if(bars[i].classList.contains('hide-bar')){
       bars[i].classList.remove('hide-bar')
+      state.openNav = false;
     } else {
       bars[i].classList.add('hide-bar')
+      state.openNav = true;
     }
   }
 }
@@ -38,7 +44,7 @@ menuButton.addEventListener('click', function(){
 })
 
 document.addEventListener('click', function(event){
-  if(!menuButton.contains(event.target)) {
+  if(state.openNav && !menuButton.contains(event.target)) {
     topNav.classList.add('hide-menu');
     toggleBars()
   }
