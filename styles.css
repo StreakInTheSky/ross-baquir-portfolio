@@ -1,7 +1,7 @@
 :root {
   --blue: 0,220,235;
   --yellow: 255,217,0;
-  --black: 57,50,65;
+  --black: 67,60,75;
   --background: rgb(240,250,220)
 }
 
@@ -12,8 +12,9 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 83%;
+  font-size: 87%;
   color: rgb(var(--black));
+  line-height: 1.5em;
 }
 
 h1, h2, h3 {
@@ -40,6 +41,10 @@ a:hover {
 
 .highlight-background {
   background-color: var(--background);
+}
+
+.tips {
+  font-style: italic;
 }
 
 .blink {
@@ -75,7 +80,7 @@ a:hover {
 .page-topper {
   position: absolute;
   width: 100%;
-  height: 50px;
+  height: 60px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +91,7 @@ a:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-size: 110%;
 }
 
 .page-topper * {
@@ -117,15 +123,24 @@ a:hover {
   transition: font-size linear 100ms;
 }
 
+.top-nav-list {
+  right: 12px;
+}
+
 .hide-menu {
   font-size: 0.5em;
+  line-height: 1em;
   -webkit-transition: font-size linear 100ms;
   transition: font-size linear 100ms;
 }
 
 .top-nav-item, .bar {
   list-style-type: none;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
+}
+
+.top-nav-item {
+  background: white;
 }
 
 .bar {
@@ -144,8 +159,31 @@ a:hover {
 .hide-bar {
   height: 1.4em;
   width: 0;
+  margin-bottom: 6px;
   -webkit-transition: height linear 100ms, width ease-in 200ms;
   transition: height linear 100ms, width ease-in 200ms;
+}
+
+.arrow-links {
+  position: relative;
+  bottom: 20px;
+  font-size: 1.5em;
+}
+
+.down-arrow, .up-arrow, .back-arrow {
+  text-decoration: none;
+}
+
+.down-arrow:hover, .up-arrow:hover {
+  background-color: white;
+}
+
+.down-arrow:hover {
+  color: rgb(var(--blue));
+}
+
+.up-arrow:hover {
+  color: rgb(var(--yellow));
 }
 
 
@@ -167,29 +205,12 @@ a:hover {
 
 .hero .tagline {
   font-family: 'Bevan', serif;
-  font-size: 3.2em;
+  font-size: 3em;
+  line-height: 1.1em;
 }
 
-.arrow-links {
+.hero .arrow-links {
   position: absolute;
-  bottom: 0;
-  font-size: 1.5em;
-}
-
-.down-arrow, .up-arrow, .back-arrow {
-  text-decoration: none;
-}
-
-.down-arrow:hover, .up-arrow:hover {
-  background-color: white;
-}
-
-.down-arrow:hover {
-  color: rgb(var(--blue));
-}
-
-.up-arrow:hover {
-  color: rgb(var(--yellow));
 }
 
 /* Content General */
@@ -200,7 +221,7 @@ a:hover {
 
 .content section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   /*padding: 5vh 0;*/
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,7 +233,7 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .section-header {
@@ -242,6 +263,19 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.paragraph-group {
+  margin-bottom: 50px;
+}
+
+.paragraph-group p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.paragraph-group p:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -281,10 +315,6 @@ a:hover {
 
 .project-listing {
   margin: 10px 0;
-}
-
-.project:last-child {
-  margin: 0;
 }
 
 .project-links {
@@ -331,9 +361,23 @@ a:hover {
 }
 
 .image-container {
-  width: 90vw;
+  width: 89vw;
+  max-width: 500px;
+  margin: auto;
   position: relative;
   border: 1px solid rgb(var(--black));
+}
+
+.more-info {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 2em;
+  padding: 5px;
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  z-index: 3;
 }
 
 .project-thumb{
@@ -353,6 +397,8 @@ a:hover {
 }
 
 .project-tech-item:after {
+  position: relative;
+  left: 2px;
   content: "•";
   color: rgb(var(--yellow));
 }
@@ -394,24 +440,15 @@ ul.contact-and-links {
   width: 120px;
 }
 
-@media screen and (orientation:landscape) and (max-width: 739px) {
-  ul.contact-and-links {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+@media only screen and (min-width: 400px) {
+  .image-container {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 739px) {
   .projects-nav, .project {
     min-width: 90vw;
-  }
-}
-
-@media only screen and (min-width: 400px) {
-  .image-container {
-    width: 300px;
   }
 }
 
@@ -430,7 +467,6 @@ ul.contact-and-links {
         justify-content: space-around;
     -webkit-box-align: end;
         -ms-flex-align: end;
-            align-items: flex-end;
     z-index: 10;
   }
 
@@ -467,6 +503,10 @@ ul.contact-and-links {
 
   .hero .tagline {
     font-size: 5em;
+  }
+
+  .content section {
+    height: 100vh;
   }
 
   .about-content {
@@ -506,22 +546,19 @@ ul.contact-and-links {
 
   .projects-content {
     width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    height: 100%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
             -ms-flex-pack: distribute;
                 justify-content: space-around;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 
   .project {
     max-width: 30%;
     min-width: 300px;
-  }
-
-  .project-body {
-    width: 300px;
   }
 
   .project-details {
@@ -548,7 +585,63 @@ ul.contact-and-links {
   }
 
   .link-icon:hover {
-    color: var(--background);
+    filter: invert(70%) sepia(100%) hue-rotate(60deg);
+    opacity: .7;
+    transition: all ease-in-out 100ms;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .projects-content {
+    justify-content: flex-start;
+  }
+
+  .project {
+    margin-right: 60px;
+    margin-bottom: 50px;
+    width: 50%;
+  }
+
+  .project-body {
+    width: 100%;
+  }
+}
+
+@media screen and (orientation:landscape) and (max-width: 739px) {
+  .content section {
+    height: 100vh;
+  }
+
+  section.about {
+    height: 100%;
+  }
+
+  .project {
+    margin: 0;
+  }
+
+  .project-body {
+    display: flex;
+    align-content: flex-start;
+  }
+
+  .project-links {
+    margin: 0;
+  }
+
+  .image-container {
+    max-width: 50%;
+  }
+
+  ul.contact-and-links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .contact-and-links-item {
+    margin: 10px auto;
   }
 }
 
