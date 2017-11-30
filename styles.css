@@ -312,6 +312,10 @@ a:hover {
   margin: 10px 0;
 }
 
+.project-tagline {
+  margin-bottom: 0;
+}
+
 .project-links {
   padding: 0;
 }
@@ -439,15 +443,15 @@ ul.contact-and-links {
   width: 120px;
 }
 
-@media only screen and (min-width: 400px) {
-  .image-container {
-    width: 100%;
-  }
-}
-
 @media only screen and (max-width: 739px) {
   .projects-nav, .project {
     min-width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .image-container {
+    width: 100%;
   }
 }
 
@@ -458,6 +462,10 @@ ul.contact-and-links {
 
   a, a:visited {
     font-size: 1em;
+  }
+
+  .arrow-links {
+    bottom: 20px;
   }
 
   .page-topper {
