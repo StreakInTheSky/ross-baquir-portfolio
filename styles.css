@@ -565,8 +565,13 @@ ul.contact-and-links {
   }
 
   .project {
-    max-width: 30%;
+    flex: 2 1 60%;
+    margin-right: 5%;
     min-width: 300px;
+  }
+
+  .project-body {
+    width: 100%;
   }
 
   .project-description {
