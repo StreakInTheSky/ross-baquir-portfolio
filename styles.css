@@ -457,7 +457,7 @@ ul.contact-and-links {
 
 @media only screen and (min-width: 740px) {
   body {
-    font-size: 100%;
+    font-size: 94%;
   }
 
   a, a:visited {
@@ -604,7 +604,7 @@ ul.contact-and-links {
   }
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1120px), screen and (max-height: 730px) {
   .projects-content {
     justify-content: flex-start;
   }
